@@ -1,0 +1,377 @@
+#******************* Question - :plot-5: 16-19 (2011-2014) :  ********************
+
+
+df1 = df[df.Period == 2011]
+print("\n\n--------------[ OUTPUT for 2011 ]----------------------\n\n")
+print(df1[['Location','Period','First Tooltip']])
+
+df2 = df[df.Period == 2012]
+print("\n\n--------------[ OUTPUT for 2012 ]----------------------\n\n")
+print(df2[['Location','Period','First Tooltip']])
+
+df3 = df[df.Period == 2013]
+print("\n\n--------------[ OUTPUT for 2013 ]----------------------\n\n")
+print(df3[['Location','Period','First Tooltip']])
+
+df4 = df[df.Period == 2014]
+print("\n\n--------------[ OUTPUT for 2014 ]----------------------\n\n")
+print(df4[['Location','Period','First Tooltip']])
+
+i = np.arange(len(df1['Location']))
+print(i)
+
+i1 = np.arange(len(df2['Location']))
+print(i1)
+
+i2 = np.arange(len(df3['Location']))
+print(i2)
+
+i3 = np.arange(len(df4['Location']))
+print(i3)
+
+#--------------- plot ----------------------
+
+plt.title('Question - : slot-5 : 2011-2014')
+plt.xlabel("Country sl. no --- >")
+plt.ylabel("Number(%) --- >")
+
+plt.plot(i,df1['First Tooltip'],
+            marker=7,
+            markersize=10,
+            linestyle='dashed',
+            label="[1] 2011")
+
+plt.plot(i1,df2['First Tooltip'],
+            marker='*',
+            markersize=10,
+            linestyle='dashed',
+            label="[2] 2012")
+
+plt.plot(i2,df3['First Tooltip'],
+            marker='+',
+            markersize=10,
+            linestyle='dashed',
+            label="[3] 2013")
+
+plt.plot(i3,df4['First Tooltip'],
+            marker='o',
+            markersize=10,
+            linestyle='dashed',
+            label="[4] 2014")
+
+plt.legend()
+plt.show()
+
+
+--------------[ OUTPUT for 2011 ]----------------------
+
+
+                                       Location  Period  First Tooltip
+7                                   Afghanistan    2011             71
+44                                      Albania    2011             97
+83                                      Algeria    2011             99
+117                                      Angola    2011             74
+153                                   Argentina    2011             99
+192                                     Armenia    2011             96
+229                                  Azerbaijan    2011             99
+256                                  Bangladesh    2011             99
+294                                     Belarus    2011             99
+321                                      Belize    2011             98
+360                                       Benin    2011             88
+394                                      Bhutan    2011             95
+433            Bolivia (Plurinational State of)    2011             99
+472                      Bosnia and Herzegovina    2011             94
+499                                    Botswana    2011             98
+538                                      Brazil    2011             99
+577                           Brunei Darussalam    2011             96
+616                                    Bulgaria    2011             98
+655                                Burkina Faso    2011             99
+689                                     Burundi    2011             90
+727                                  Cabo Verde    2011             99
+761                                    Cambodia    2011             98
+796                                    Cameroon    2011             80
+834                    Central African Republic    2011             74
+873                                        Chad    2011             52
+908                                       Chile    2011             91
+947                                       China    2011             99
+983                                    Colombia    2011             83
+1022                                    Comoros    2011             78
+1057                                      Congo    2011             95
+                                        ...     ...            ...
+4676                            Solomon Islands    2011             94
+4715                                    Somalia    2011             39
+4754                               South Africa    2011             84
+4790                                South Sudan    2011             75
+4798                                  Sri Lanka    2011             99
+4837                                      Sudan    2011             92
+4876                                     Sweden    2011             23
+4915                       Syrian Arab Republic    2011             90
+4954                                 Tajikistan    2011             97
+4981                                   Thailand    2011             99
+5020  The former Yugoslav Republic of Macedonia    2011             94
+5046                                Timor-Leste    2011             79
+5063                                       Togo    2011             97
+5101                                      Tonga    2011             89
+5140                                    Tunisia    2011             98
+5177                                     Turkey    2011             96
+5215                               Turkmenistan    2011             98
+5242                                     Tuvalu    2011             99
+5281                                     Uganda    2011             97
+5319                                    Ukraine    2011             90
+5346                       United Arab Emirates    2011             96
+5385                United Republic of Tanzania    2011             99
+5424                                    Uruguay    2011             99
+5463                                 Uzbekistan    2011             99
+5490                                    Vanuatu    2011             90
+5528         Venezuela (Bolivarian Republic of)    2011             95
+5567                                   Viet Nam    2011             98
+5603                                      Yemen    2011             59
+5642                                     Zambia    2011             92
+5680                                   Zimbabwe    2011             98
+
+[159 rows x 3 columns]
+
+
+--------------[ OUTPUT for 2012 ]----------------------
+
+
+                                       Location  Period  First Tooltip
+6                                   Afghanistan    2012             78
+43                                      Albania    2012             96
+82                                      Algeria    2012             99
+116                                      Angola    2012             73
+152                                   Argentina    2012             99
+191                                     Armenia    2012             96
+228                                  Azerbaijan    2012             98
+255                                  Bangladesh    2012             98
+293                                     Belarus    2012             98
+320                                      Belize    2012             98
+359                                       Benin    2012             96
+393                                      Bhutan    2012             95
+432            Bolivia (Plurinational State of)    2012             99
+471                      Bosnia and Herzegovina    2012             96
+498                                    Botswana    2012             98
+537                                      Brazil    2012             99
+576                           Brunei Darussalam    2012             99
+615                                    Bulgaria    2012             97
+654                                Burkina Faso    2012             96
+688                                     Burundi    2012             98
+726                                  Cabo Verde    2012             99
+760                                    Cambodia    2012             99
+795                                    Cameroon    2012             81
+833                    Central African Republic    2012             74
+872                                        Chad    2012             62
+907                                       Chile    2012             92
+946                                       China    2012             99
+982                                    Colombia    2012             89
+1021                                    Comoros    2012             79
+1056                                      Congo    2012             92
+                                        ...     ...            ...
+4675                            Solomon Islands    2012             85
+4714                                    Somalia    2012             37
+4753                               South Africa    2012             86
+4789                                South Sudan    2012             65
+4797                                  Sri Lanka    2012             99
+4836                                      Sudan    2012             92
+4875                                     Sweden    2012             24
+4914                       Syrian Arab Republic    2012             82
+4953                                 Tajikistan    2012             97
+4980                                   Thailand    2012             99
+5019  The former Yugoslav Republic of Macedonia    2012             95
+5045                                Timor-Leste    2012             86
+5062                                       Togo    2012             97
+5100                                      Tonga    2012             84
+5139                                    Tunisia    2012             99
+5176                                     Turkey    2012             96
+5214                               Turkmenistan    2012             99
+5241                                     Tuvalu    2012             99
+5280                                     Uganda    2012             95
+5318                                    Ukraine    2012             95
+5345                       United Arab Emirates    2012             94
+5384                United Republic of Tanzania    2012             99
+5423                                    Uruguay    2012             99
+5462                                 Uzbekistan    2012             99
+5489                                    Vanuatu    2012             92
+5527         Venezuela (Bolivarian Republic of)    2012             96
+5566                                   Viet Nam    2012             98
+5602                                      Yemen    2012             64
+5641                                     Zambia    2012             92
+5679                                   Zimbabwe    2012             98
+
+[159 rows x 3 columns]
+
+
+--------------[ OUTPUT for 2013 ]----------------------
+
+
+                                       Location  Period  First Tooltip
+5                                   Afghanistan    2013             72
+42                                      Albania    2013             99
+81                                      Algeria    2013             99
+115                                      Angola    2013             71
+151                                   Argentina    2013             99
+190                                     Armenia    2013             99
+227                                  Azerbaijan    2013             98
+254                                  Bangladesh    2013             99
+292                                     Belarus    2013             99
+319                                      Belize    2013             99
+358                                       Benin    2013             95
+392                                      Bhutan    2013             97
+431            Bolivia (Plurinational State of)    2013             94
+470                      Bosnia and Herzegovina    2013             97
+497                                    Botswana    2013             98
+536                                      Brazil    2013             99
+575                           Brunei Darussalam    2013             99
+614                                    Bulgaria    2013             97
+653                                Burkina Faso    2013             96
+687                                     Burundi    2013             95
+725                                  Cabo Verde    2013             94
+759                                    Cambodia    2013             96
+794                                    Cameroon    2013             82
+832                    Central African Republic    2013             37
+871                                        Chad    2013             60
+906                                       Chile    2013             98
+945                                       China    2013             99
+981                                    Colombia    2013             85
+1020                                    Comoros    2013             85
+1055                                      Congo    2013             92
+                                        ...     ...            ...
+4674                            Solomon Islands    2013             82
+4713                                    Somalia    2013             37
+4752                               South Africa    2013             88
+4788                                South Sudan    2013             58
+4796                                  Sri Lanka    2013             99
+4835                                      Sudan    2013             93
+4874                                     Sweden    2013             27
+4913                       Syrian Arab Republic    2013             84
+4952                                 Tajikistan    2013             98
+4979                                   Thailand    2013             99
+5018  The former Yugoslav Republic of Macedonia    2013             97
+5044                                Timor-Leste    2013             86
+5061                                       Togo    2013             97
+5099                                      Tonga    2013             89
+5138                                    Tunisia    2013             97
+5175                                     Turkey    2013             96
+5213                               Turkmenistan    2013             98
+5240                                     Tuvalu    2013             99
+5279                                     Uganda    2013             93
+5317                                    Ukraine    2013             95
+5344                       United Arab Emirates    2013             94
+5383                United Republic of Tanzania    2013             99
+5422                                    Uruguay    2013             98
+5461                                 Uzbekistan    2013             99
+5488                                    Vanuatu    2013             93
+5526         Venezuela (Bolivarian Republic of)    2013             95
+5565                                   Viet Nam    2013             95
+5601                                      Yemen    2013             71
+5640                                     Zambia    2013             95
+5678                                   Zimbabwe    2013             95
+
+[158 rows x 3 columns]
+
+
+--------------[ OUTPUT for 2014 ]----------------------
+
+
+                                       Location  Period  First Tooltip
+4                                   Afghanistan    2014             74
+41                                      Albania    2014             99
+80                                      Algeria    2014             99
+114                                      Angola    2014             72
+150                                   Argentina    2014             99
+189                                     Armenia    2014             99
+226                                  Azerbaijan    2014             98
+253                                  Bangladesh    2014             99
+291                                     Belarus    2014             98
+318                                      Belize    2014             98
+357                                       Benin    2014             91
+391                                      Bhutan    2014             99
+430            Bolivia (Plurinational State of)    2014             94
+469                      Bosnia and Herzegovina    2014             98
+496                                    Botswana    2014             98
+535                                      Brazil    2014             99
+574                           Brunei Darussalam    2014             99
+613                                    Bulgaria    2014             97
+652                                Burkina Faso    2014             98
+686                                     Burundi    2014             92
+724                                  Cabo Verde    2014             99
+758                                    Cambodia    2014             98
+793                                    Cameroon    2014             82
+831                    Central African Republic    2014             74
+870                                        Chad    2014             58
+905                                       Chile    2014             98
+944                                       China    2014             99
+980                                    Colombia    2014             89
+1019                                    Comoros    2014             90
+1054                                      Congo    2014             95
+                                        ...     ...            ...
+4673                            Solomon Islands    2014             81
+4712                                    Somalia    2014             37
+4751                               South Africa    2014             93
+4787                                South Sudan    2014             55
+4795                                  Sri Lanka    2014             99
+4834                                      Sudan    2014             95
+4873                                     Sweden    2014             26
+4912                       Syrian Arab Republic    2014             81
+4951                                 Tajikistan    2014             98
+4978                                   Thailand    2014             99
+5017  The former Yugoslav Republic of Macedonia    2014             99
+5043                                Timor-Leste    2014             79
+5060                                       Togo    2014             79
+5098                                      Tonga    2014             89
+5137                                    Tunisia    2014             95
+5174                                     Turkey    2014             95
+5212                               Turkmenistan    2014             99
+5239                                     Tuvalu    2014             99
+5278                                     Uganda    2014             91
+5316                                    Ukraine    2014             39
+5343                       United Arab Emirates    2014             90
+5382                United Republic of Tanzania    2014             99
+5421                                    Uruguay    2014             99
+5460                                 Uzbekistan    2014             99
+5487                                    Vanuatu    2014             95
+5525         Venezuela (Bolivarian Republic of)    2014             97
+5564                                   Viet Nam    2014             96
+5600                                      Yemen    2014             73
+5639                                     Zambia    2014             99
+5677                                   Zimbabwe    2014             99
+
+[158 rows x 3 columns]
+[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158]
+[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158]
+[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157]
+[  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157]
+
+In [24]:
